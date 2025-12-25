@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Video Playlist</title>
+</head>
+<body>
+    <div id="purchasedCoursesSection">
+        <h3>Purchased Course</h3>
+        <button onclick="showVideoPlaylist()">Start Learning</button>
+    </div>
+
+    <div id="activitySection">
+        <h3>Activity Section</h3>
+        <p>Recent activity...</p>
+    </div>
+
+    <div id="videoPlaylistSection" style="display: none;">
+        <h3>Video Playlist</h3>
+        <button onclick="hideVideoPlaylist()">Back to Dashboard</button>
+        <div onclick="playVideo('xmoWNKXHyRw')">Video 1</div>
+        <div onclick="playVideo('7b-ONJrzqTs')">Video 2</div>
+    </div>
+
+    <script>
+        function showVideoPlaylist() {
+            console.log('showVideoPlaylist called');
+            const purchasedCoursesSection = document.getElementById('purchasedCoursesSection');
+            const activitySection = document.getElementById('activitySection');
+            const videoPlaylistSection = document.getElementById('videoPlaylistSection');
+            
+            console.log('Elements found:', {
+                purchasedCoursesSection: !!purchasedCoursesSection,
+                activitySection: !!activitySection,
+                videoPlaylistSection: !!videoPlaylistSection
+            });
+            
+            if (purchasedCoursesSection) purchasedCoursesSection.style.display = 'none';
+            if (activitySection) activitySection.style.display = 'none';
+            if (videoPlaylistSection) videoPlaylistSection.style.display = 'block';
+        }
+
+        function hideVideoPlaylist() {
+            console.log('hideVideoPlaylist called');
+            const purchasedCoursesSection = document.getElementById('purchasedCoursesSection');
+            const activitySection = document.getElementById('activitySection');
+            const videoPlaylistSection = document.getElementById('videoPlaylistSection');
+            
+            if (purchasedCoursesSection) purchasedCoursesSection.style.display = 'block';
+            if (activitySection) activitySection.style.display = 'block';
+            if (videoPlaylistSection) videoPlaylistSection.style.display = 'none';
+        }
+
+        function playVideo(videoId) {
+            window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
+        }
+    </script>
+</body>
+</html>
