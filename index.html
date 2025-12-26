@@ -470,6 +470,318 @@
                 display: none;
             }
         }
+
+        /* Course Dashboard Styles */
+        .course-dashboard-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 9999;
+            overflow-y: auto;
+            padding: 20px;
+            animation: slideInFromRight 0.4s ease-out;
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .course-dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .course-header-dashboard {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .back-btn-dashboard {
+            background: linear-gradient(135deg, #3196ff, #0088cc);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn-dashboard:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(49, 150, 255, 0.4);
+        }
+
+        .course-info-dashboard {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .course-thumbnail-large-dashboard {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .course-thumbnail-large-dashboard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-details-dashboard {
+            flex: 1;
+        }
+
+        .course-title-main-dashboard {
+            font-size: 32px;
+            color: #202C45;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .course-meta-dashboard {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 15px;
+        }
+
+        .meta-item-dashboard {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+        }
+
+        .course-instructors-dashboard {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .course-price-large-dashboard {
+            font-size: 28px;
+            color: #3196ff;
+            font-weight: 700;
+        }
+
+        .progress-container-dashboard {
+            margin-top: 20px;
+        }
+
+        .progress-info-dashboard {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .progress-bar-large-dashboard {
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill-large-dashboard {
+            height: 100%;
+            background: linear-gradient(90deg, #3196ff, #0088cc);
+            width: 0%;
+            transition: width 1s ease;
+        }
+
+        .videos-section-dashboard {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .section-header-dashboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title-dashboard {
+            font-size: 24px;
+            color: #202C45;
+            font-weight: 700;
+        }
+
+        .playlist-link-dashboard {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .playlist-link-dashboard:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+        }
+
+        .videos-grid-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card-dashboard {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .video-card-dashboard:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(49, 150, 255, 0.3);
+        }
+
+        .video-thumbnail-dashboard {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #202C45, #3196ff);
+            overflow: hidden;
+        }
+
+        .video-thumbnail-dashboard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay-dashboard {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .video-card-dashboard:hover .play-overlay-dashboard {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .play-icon-dashboard {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #3196ff;
+            transition: all 0.3s;
+        }
+
+        .video-card-dashboard:hover .play-icon-dashboard {
+            transform: scale(1.2);
+            background: white;
+        }
+
+        .video-number-dashboard {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .video-info-dashboard {
+            padding: 20px;
+        }
+
+        .video-title-dashboard {
+            font-size: 16px;
+            color: #202C45;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .video-description-dashboard {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .completed-badge-dashboard {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .course-info-dashboard {
+                flex-direction: column;
+            }
+
+            .course-title-main-dashboard {
+                font-size: 24px;
+            }
+
+            .videos-grid-dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header-dashboard {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .course-dashboard-fullscreen {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -520,7 +832,7 @@
                     <div class="user-avatar-large">P</div>
                     <div class="user-details">
                         <h2>Pulkit</h2>
-                        <p>pulkitkumar10@gmail.com</p>
+                        <p>pulkit@example.com</p>
                         <p style="font-size: 12px; margin-top: 5px;">Student ID: IGP2024001</p>
                     </div>
                 </div>
@@ -555,7 +867,7 @@
             </div>
 
             <!-- Purchased Courses -->
-            <div class="courses-section">
+            <div id="purchasedCoursesSection" class="courses-section"></div>
                 <h3 class="section-title">Your Purchased Course</h3>
                 
                 <div class="courses-grid">
@@ -581,7 +893,7 @@
                             </div>
 
                             <div class="course-actions">
-                                <button class="btn btn-primary">Start Learning</button>
+                                <button class="btn btn-primary" onclick="showCourseDashboard()">Start Learning</button>
                                 <button class="btn btn-secondary">📖</button>
                             </div>
                         </div>
@@ -589,8 +901,63 @@
                 </div>
             </div>
 
+            <!-- Course Dashboard Section (Initially Hidden) -->
+            <div id="courseDashboardSection" class="course-dashboard-fullscreen" style="display: none;">
+                <div class="course-dashboard-container">
+                    <div class="course-header-dashboard">
+                        <button onclick="hideCourseDashboard()" class="back-btn-dashboard">← Back to Dashboard</button>
+                        <div class="course-info-dashboard">
+                            <div class="course-thumbnail-large-dashboard">
+                                <img src="67878ee44b304e64e65b7f01_scaled_cover.jpg" alt="CA Final Both 2nd Group">
+                            </div>
+                            <div class="course-details-dashboard">
+                                <h1 class="course-title-main-dashboard">CA Final Both 2nd Group</h1>
+                                <div class="course-meta-dashboard">
+                                    <div class="meta-item-dashboard">
+                                        <span>🎥</span>
+                                        <span>30 Video Lectures</span>
+                                    </div>
+                                    <div class="meta-item-dashboard">
+                                        <span>⏱️</span>
+                                        <span>Professional Training</span>
+                                    </div>
+                                    <div class="meta-item-dashboard">
+                                        <span>📊</span>
+                                        <span>6 Modules</span>
+                                    </div>
+                                </div>
+                                <div class="course-instructors-dashboard">
+                                    <strong>Instructors:</strong> CA Ashish Kalra, CA Kapil Goyal, CA Rohit Sethi, CA Vijender Aggarwal, CA Harsh Gupta
+                                </div>
+                                <div class="course-price-large-dashboard">₹24,990</div>
+                                <div class="progress-container-dashboard">
+                                    <div class="progress-info-dashboard">
+                                        <span><strong>Course Progress</strong></span>
+                                        <span id="progressPercent">0%</span>
+                                    </div>
+                                    <div class="progress-bar-large-dashboard">
+                                        <div class="progress-fill-large-dashboard" id="progressBar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-section-dashboard">
+                        <div class="section-header-dashboard">
+                            <h2 class="section-title-dashboard">📚 Course Videos</h2>
+                            <a href="https://youtube.com/playlist?list=PLTkmr_EzHUYqciucz3pK5nsDtSTHeDUDZ&si=ET0RG5lfjEPT4a5-" target="_blank" class="playlist-link-dashboard">
+                                <span>▶</span>
+                                <span>Watch Full Playlist</span>
+                            </a>
+                        </div>
+                        <div class="videos-grid-dashboard" id="videosGrid"></div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Recent Activity -->
-            <div class="activity-section">
+            <div id="activitySection" class="activity-section"></div>
                 <h3 class="section-title">Recent Activity</h3>
                 
                 <div class="activity-list">
@@ -673,9 +1040,9 @@
                 <div style="background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; padding: 30px; border: 1px solid #e3e8ed; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(49, 150, 255, 0.15)'; this.style.borderColor='#3196ff'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.1)'; this.style.borderColor='#e3e8ed'">
                     <div style="position: absolute; top: -50%; right: -50%; width: 100px; height: 100px; background: linear-gradient(135deg, rgba(49, 150, 255, 0.1), rgba(0, 136, 204, 0.1)); border-radius: 50%; z-index: 0;"></div>
                     <div style="text-align: center; margin-bottom: 25px; position: relative; z-index: 1;">
-                        <div style="width: 220px; height: 220px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); position: relative;">
-                            <img src="67878ee44b304e64e65b7f01_scaled_cover.jpg" alt="CA Inter Both Group Combo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                            <div style="position: absolute; top: 10px; right: 10px; background: rgba(220, 53, 69, 0.9); color: white; padding: 5px 10px; border-radius: 15px; font-size: 12px; font-weight: 600;">BESTSELLER</div>
+                        <div style="width: 240px; height: 160px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.15); position: relative;">
+                            <img src="67878ee44b304e64e65b7f01_scaled_cover.jpg" alt="CA Inter Both Group Combo" style="width: 100%; height: 100%; object-fit: contain; background: #f8f9fa; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <div style="position: absolute; top: 8px; right: 8px; background: rgba(220, 53, 69, 0.9); color: white; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 600;">BESTSELLER</div>
                         </div>
                     </div>
                     <div style="position: relative; z-index: 1;">
@@ -886,7 +1253,9 @@
             </div>
 
             <!-- Faculty Information Section -->
-            <div style="margin-top: 80px; padding-top: 50px; border-top: 2px solid #f0f0f0; max-width: 1400px; margin-left: auto; margin-right: auto;"></div>
+            <div style="margin-top: 80px; padding-top: 50px; border-top: 2px solid #f0f0f0; max-width: 1400px; margin-left: auto; margin-right: auto;">
+                
+            </div>
                 <div style="text-align: center; margin-bottom: 50px;">
                     <h3 style="color: #202C45; font-size: 28px; font-weight: 700; position: relative; display: inline-block;">
                         Top Faculty Information
@@ -963,7 +1332,173 @@
         </div>
     </div>
 
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; padding: 20px; overflow-y: auto;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <button onclick="closeVideoPlayer()" style="position: fixed; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 28px; cursor: pointer; z-index: 10001; transition: all 0.3s;">×</button>
+            <div style="background: white; border-radius: 20px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe id="videoIframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div style="padding: 30px; background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+                    <h2 id="currentVideoTitle" style="color: #202C45; font-size: 28px; margin-bottom: 15px; font-weight: 700;"></h2>
+                    <p id="currentVideoDescription" style="color: #666; font-size: 16px; line-height: 1.6;"></p>
+                    <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                        <button onclick="previousVideo()" style="background: linear-gradient(135deg, #6c757d, #5a6268); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">← Previous</button>
+                        <button onclick="nextVideo()" style="background: linear-gradient(135deg, #3196ff, #0088cc); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Next →</button>
+                        <button onclick="markAsComplete()" style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s; margin-left: auto;">✓ Mark Complete</button>
+                    </div>
+                </div>
+            </div>
+            <div style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+                <h3 style="color: #202C45; font-size: 24px; margin-bottom: 20px; font-weight: 700;">📚 Course Playlist</h3>
+                <div id="playlistContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px;"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Course Dashboard Variables and Functions
+        const videos = [
+            {id: 'xmoWNKXHyRw', title: 'Lecture 1: CA Final Group 2 - Course Introduction', description: 'Introduction to CA Final Group 2 and course overview. Learn the fundamentals and structure of the course.'},
+            {id: '7b-ONJrzqTs', title: 'Lecture 2: Advanced Financial Management - Part 1', description: 'Comprehensive coverage of advanced financial management concepts including capital budgeting and risk management.'},
+            {id: 'UnNSkgV8NGM', title: 'Lecture 3: Strategic Financial Management Basics', description: 'Strategic approaches to financial management and planning. Understanding business valuation fundamentals.'},
+            {id: 'nQV_uTFesd4', title: 'Lecture 4: Advanced Auditing - Introduction', description: 'In-depth study of auditing principles and practices. Covers audit planning and methodology.'},
+            {id: '6jwVp3Y5_7o', title: 'Lecture 5: Corporate Restructuring Fundamentals', description: 'Understanding corporate restructuring strategies including amalgamation basics and corporate law framework.'},
+            {id: '7b-ONJrzqTs', title: 'Lecture 6: Advanced Financial Management - Part 2', description: 'Advanced concepts in financial planning, portfolio management, and investment decision-making processes.'},
+            {id: 'UnNSkgV8NGM', title: 'Lecture 7: Strategic Financial Management - Valuation', description: 'Business valuation techniques, mergers & acquisitions, and corporate finance strategies.'},
+            {id: '5tzuEWb4JZE', title: 'Lecture 8: International Financial Reporting Standards', description: 'International standards and practices in financial reporting. IFRS framework and application.'},
+            {id: 'QkLryioEMo8', title: 'Lecture 9: Risk Management Fundamentals', description: 'Comprehensive risk management frameworks, identification, and assessment techniques.'},
+            {id: '7b-ONJrzqTs', title: 'Lecture 10: Financial Planning & Analysis', description: 'Advanced financial planning techniques, budgeting, forecasting, and variance analysis.'},
+            {id: 'nQV_uTFesd4', title: 'Lecture 11: Advanced Auditing - Standards', description: 'Detailed study of auditing standards, compliance requirements, and regulatory framework.'},
+            {id: 'QkLryioEMo8', title: 'Lecture 12: Internal Control Systems', description: 'Enterprise risk management and internal control frameworks. Best practices in corporate governance.'},
+            {id: 'nQV_uTFesd4', title: 'Lecture 13: Audit Planning & Execution', description: 'Comprehensive audit planning, risk assessment, materiality, and audit procedures.'},
+            {id: '6jwVp3Y5_7o', title: 'Lecture 14: Corporate Governance & Ethics', description: 'Corporate governance principles, ethical considerations, and professional standards.'},
+            {id: 'nQV_uTFesd4', title: 'Lecture 15: Audit Reporting & Documentation', description: 'Audit report formats, documentation requirements, and quality control procedures.'},
+            {id: '6jwVp3Y5_7o', title: 'Lecture 16: Mergers & Acquisitions', description: 'Complete guide to M&A transactions, due diligence, valuation, and deal structuring.'},
+            {id: 'xmoWNKXHyRw', title: 'Lecture 17: Demergers & Spin-offs', description: 'Understanding demerger processes, legal framework, and tax implications.'},
+            {id: '6jwVp3Y5_7o', title: 'Lecture 18: Takeovers & Amalgamations', description: 'Hostile and friendly takeovers, amalgamation procedures, and regulatory compliance.'},
+            {id: 'UnNSkgV8NGM', title: 'Lecture 19: Corporate Valuation Methods', description: 'DCF, comparable company analysis, precedent transactions, and valuation adjustments.'},
+            {id: '7b-ONJrzqTs', title: 'Lecture 20: Post-Merger Integration', description: 'Integration strategies, synergy realization, and performance measurement post-merger.'},
+            {id: '5tzuEWb4JZE', title: 'Lecture 21: IFRS - Revenue Recognition', description: 'IFRS 15 Revenue from Contracts with Customers - detailed analysis and implementation.'},
+            {id: '5tzuEWb4JZE', title: 'Lecture 22: IFRS - Leases & Financial Instruments', description: 'IFRS 16 Leases and IFRS 9 Financial Instruments - comprehensive coverage.'},
+            {id: 'UnNSkgV8NGM', title: 'Lecture 23: Foreign Exchange & Treasury', description: 'Foreign exchange risk management, hedging strategies, and treasury operations.'},
+            {id: '5tzuEWb4JZE', title: 'Lecture 24: Consolidation & Group Accounting', description: 'Consolidated financial statements, intercompany transactions, and equity accounting.'},
+            {id: 'QkLryioEMo8', title: 'Lecture 25: Transfer Pricing & International Tax', description: 'Transfer pricing regulations, international taxation, and compliance requirements.'},
+            {id: 'nQV_uTFesd4', title: 'Lecture 26: Case Studies - Audit Scenarios', description: 'Real-world audit case studies, problem-solving approaches, and practical applications.'},
+            {id: '7b-ONJrzqTs', title: 'Lecture 27: Case Studies - Financial Management', description: 'Complex financial management scenarios, decision-making, and analytical techniques.'},
+            {id: '6jwVp3Y5_7o', title: 'Lecture 28: Case Studies - Corporate Restructuring', description: 'Practical case studies on mergers, acquisitions, and corporate restructuring projects.'},
+            {id: 'xmoWNKXHyRw', title: 'Lecture 29: Exam Strategy & Time Management', description: 'CA Final exam preparation strategies, time management tips, and answer writing techniques.'},
+            {id: 'QkLryioEMo8', title: 'Lecture 30: Revision & Key Concepts', description: 'Comprehensive revision of all modules, important topics, and last-minute preparation tips.'}
+        ];
+
+        let currentVideoIndex = 0;
+
+        function generateVideoCards() {
+            const videosGrid = document.getElementById('videosGrid');
+            const completedVideos = JSON.parse(localStorage.getItem('completedVideos') || '[]');
+            
+            videosGrid.innerHTML = videos.map((video, index) => {
+                const isCompleted = completedVideos.includes(index);
+                return `
+                    <div class="video-card-dashboard" onclick="playVideo(${index})">
+                        <div class="video-thumbnail-dashboard">
+                            <img src="https://img.youtube.com/vi/${video.id}/maxresdefault.jpg" alt="${video.title}">
+                            <div class="play-overlay-dashboard">
+                                <div class="play-icon-dashboard">▶</div>
+                            </div>
+                            <div class="video-number-dashboard">Lecture ${index + 1}</div>
+                            ${isCompleted ? '<div class="completed-badge-dashboard">✓ Completed</div>' : ''}
+                        </div>
+                        <div class="video-info-dashboard">
+                            <h3 class="video-title-dashboard">${video.title}</h3>
+                            <p class="video-description-dashboard">${video.description}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function playVideo(index) {
+            currentVideoIndex = index;
+            const video = videos[currentVideoIndex];
+            const modal = document.getElementById('videoPlayerModal');
+            const iframe = document.getElementById('videoIframe');
+            const title = document.getElementById('currentVideoTitle');
+            const description = document.getElementById('currentVideoDescription');
+
+            iframe.src = 'https://www.youtube.com/embed/' + video.id + '?autoplay=1&rel=0';
+            title.textContent = video.title;
+            description.textContent = video.description;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+            generatePlaylist();
+            updateProgress();
+        }
+
+        function closeVideoPlayer() {
+            const modal = document.getElementById('videoPlayerModal');
+            const iframe = document.getElementById('videoIframe');
+            modal.style.display = 'none';
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        function previousVideo() {
+            if (currentVideoIndex > 0) {
+                playVideo(currentVideoIndex - 1);
+            }
+        }
+
+        function nextVideo() {
+            if (currentVideoIndex < videos.length - 1) {
+                playVideo(currentVideoIndex + 1);
+            }
+        }
+
+        function markAsComplete() {
+            let completedVideos = JSON.parse(localStorage.getItem('completedVideos') || '[]');
+            if (!completedVideos.includes(currentVideoIndex)) {
+                completedVideos.push(currentVideoIndex);
+                localStorage.setItem('completedVideos', JSON.stringify(completedVideos));
+                updateProgress();
+                generatePlaylist();
+                generateVideoCards();
+                alert('✓ Video marked as complete!');
+            }
+        }
+
+        function updateProgress() {
+            const completedVideos = JSON.parse(localStorage.getItem('completedVideos') || '[]');
+            const progress = (completedVideos.length / videos.length) * 100;
+            const progressBar = document.getElementById('progressBar');
+            const progressPercent = document.getElementById('progressPercent');
+            
+            if (progressBar) progressBar.style.width = progress + '%';
+            if (progressPercent) progressPercent.textContent = Math.round(progress) + '%';
+        }
+
+        function generatePlaylist() {
+            const container = document.getElementById('playlistContainer');
+            const completedVideos = JSON.parse(localStorage.getItem('completedVideos') || '[]');
+            
+            container.innerHTML = videos.map((video, index) => {
+                const isCompleted = completedVideos.includes(index);
+                const isCurrent = index === currentVideoIndex;
+                return `
+                    <div onclick="playVideo(${index})" style="background: ${isCurrent ? 'linear-gradient(135deg, #e3f2fd, #bbdefb)' : '#f8f9fa'}; padding: 15px; border-radius: 10px; cursor: pointer; transition: all 0.3s; border: 2px solid ${isCurrent ? '#3196ff' : 'transparent'};">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="background: ${isCompleted ? '#28a745' : '#6c757d'}; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600;">${isCompleted ? '✓' : index + 1}</span>
+                            <span style="color: #202C45; font-weight: 600; font-size: 14px; flex: 1;">${video.title}</span>
+                            ${isCurrent ? '<span style="color: #3196ff; font-size: 20px;">▶</span>' : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Dashboard Functions
         function openDashboard() {
             document.getElementById('dashboardOverlay').classList.add('active');
             document.getElementById('dashboardModal').classList.add('active');
@@ -976,10 +1511,42 @@
             document.body.style.overflow = 'auto';
         }
 
+        function showCourseDashboard() {
+            console.log('showCourseDashboard called');
+            // Show course dashboard in full screen
+            const courseDashboardSection = document.getElementById('courseDashboardSection');
+            
+            console.log('Elements found:', {
+                courseDashboardSection: !!courseDashboardSection
+            });
+            
+            if (courseDashboardSection) {
+                courseDashboardSection.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                // Generate video cards when showing the dashboard
+                setTimeout(() => {
+                    generateVideoCards();
+                    updateProgress();
+                }, 100);
+            }
+        }
+
+        function hideCourseDashboard() {
+            console.log('hideCourseDashboard called');
+            // Hide the full-screen course dashboard
+            const courseDashboardSection = document.getElementById('courseDashboardSection');
+            
+            if (courseDashboardSection) {
+                courseDashboardSection.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        }
+
         // Close on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeDashboard();
+                closeVideoPlayer();
             }
         });
 
@@ -996,7 +1563,11 @@
                 });
             }
         });
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
     </script>
 </body>
-
 </html>
